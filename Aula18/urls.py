@@ -14,16 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-#curso add secudary page#
 from django.http import HttpResponse
 from django.urls import path
 
 
 def my_view(request):
-    return HttpResponse('UM STRING')
+    return HttpResponse('ESSA É A PAGINA INICIAL')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', my_view)  # add http/secundarypage
+    path('', my_view)  # add http/secundarypage
 ]
